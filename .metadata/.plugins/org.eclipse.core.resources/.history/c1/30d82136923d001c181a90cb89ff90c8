@@ -1,0 +1,76 @@
+package Student;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+class Search_Employee implements ActionListener{
+    JFrame f;
+    JTextField t;
+    JLabel l,l5;
+    JButton b,b2;
+
+    Search_Employee(){
+        f=new JFrame("Search");
+        f.setBackground(Color.green);
+        f.setLayout(null);
+
+        l5=new JLabel();
+        l5.setBounds(0,0,1280,720);
+        l5.setLayout(null);
+        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("Student/project_images/search.png"));
+        l5.setIcon(img);
+
+
+        l=new JLabel("Reg. no.");
+        l.setVisible(true);
+        l.setBounds(550,350,250,30);
+        l.setForeground(Color.white);
+        l5.add(l);
+        f.add(l5);
+        l.setFont(new Font("Ubuntu", Font.PLAIN, 24));
+
+        t=new JTextField();
+        t.setBounds(650,350,220,30);
+        l5.add(t);
+        t.setFont(new Font("Ubuntu", Font.PLAIN, 24));
+        
+
+        b=new JButton("Search");
+        b.setBounds(600,400,150,40);
+        b.addActionListener(this);
+        b.setBackground(Color.BLUE);
+        b.setForeground(Color.WHITE);
+        l5.add(b);
+        b.setFont(new Font("Ubuntu", Font.PLAIN, 24));
+
+
+        b2=new JButton("Cancel");
+        b2.setBounds(800,400,150,40);
+        b2.addActionListener(this);
+        b2.setBackground(Color.BLUE);
+        b2.setForeground(Color.WHITE);
+        l5.add(b2);
+        b2.setFont(new Font("Ubuntu", Font.PLAIN, 24));
+
+        f.setSize(1280,720);
+        f.setLocation(0,0);
+        f.setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getSource()==b2){
+            f.setVisible(false);
+            details d=new details();
+        }
+        if(ae.getSource()==b){
+            new Update_Employee(t.getText());
+            f.setVisible(false);
+        }
+
+    }
+    
+    public static void main(String[]ar){
+        new Search_Employee();
+    } 	
+}
