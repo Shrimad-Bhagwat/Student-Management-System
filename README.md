@@ -14,4 +14,6 @@ Wampserver Installation required for MySql
 - database : students
 - tables   : login and student
 
-## [DEMO VIDEO](https://github.com/Shrimad-Bhagwat/Student-Management-System/blob/main/Student%20Management%20System%20Video.mp4?raw=true)
+## [DEMO VIDEO](https://github.com/Shrimad-Bhagwat/Student-Management-System/blob/main/Java%20Demo.mp4?raw=true)
+
+## [Code Explanation](https://github.com/Shrimad-Bhagwat/Student-Management-System/blob/main/Java%20Presentation.mp4?raw=true)
